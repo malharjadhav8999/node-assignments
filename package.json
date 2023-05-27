@@ -1,0 +1,14 @@
+{
+  "name": "node-assignments",
+  "version": "1.0.0",
+  "description": "Node assignments",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malhar Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
