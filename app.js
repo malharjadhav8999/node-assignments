@@ -33,7 +33,7 @@ express.use(cors());
 
 const db = require('./models/index')
 
-console.log('connection', connection)
+// console.log('connection', connection)
 
 
 db.query('SELECT 1')
