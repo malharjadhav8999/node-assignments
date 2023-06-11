@@ -8,6 +8,7 @@
 
 let app = require('express');
 let express = app();
+let bodyparser = require('body-parser')
 
 // async await request handlers are used which can't be handled in express v4
 // they are handled in express v5 beta so using express-async-erros package for
@@ -16,11 +17,18 @@ require('express-async-errors')
 
 const db = require('./models/index')
 
+
+// middleware
+
+// converting incoming request body in JSON format
+express.use(bodyparser.json())
+console.log('bodyparser', bodyparser.json())
+
 employeeRoutes = require('./controllers/employee.controller')
 
 express.use('/api/employees', employeeRoutes);
 
-// middleware
+
 express.use((err, req, res, next) => {
     console.log(err)
     // if we do not provide any error status code in catch then it'll consider 500
